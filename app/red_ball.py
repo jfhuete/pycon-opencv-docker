@@ -2,15 +2,6 @@ import cv2
 import numpy as np
 from time import sleep
 
-cap = cv2.VideoCapture(0)
-
-WIDTH = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
-HEIGHT = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
-
-# frames per second
-
-FRAME_RATE = 25
-
 
 def clean_mask(mask):
 
@@ -71,6 +62,17 @@ def detection(mask, frame, last_circle):
 
 
 def main():
+
+    # Video capture
+    cap = cv2.VideoCapture(0)
+
+    # Constans with WIDTH and HEIGHT of the screen
+    WIDTH = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
+    HEIGHT = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
+
+    # frames per second
+
+    FRAME_RATE = 25
 
     # HSV color filter values
 

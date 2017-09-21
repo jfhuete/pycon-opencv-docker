@@ -1,4 +1,5 @@
 import red_ball
+import face
 
 if __name__ == "__main__":
     selection = 0
@@ -14,5 +15,7 @@ if __name__ == "__main__":
 
     if selection == 1:
         app = red_ball
+    if selection == 3:
+        app = face
 
     app.main()
