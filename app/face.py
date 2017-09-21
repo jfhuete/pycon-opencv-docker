@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 from time import sleep
 
 
@@ -7,10 +6,6 @@ def main():
 
     # Video capture
     cap = cv2.VideoCapture(0)
-
-    # Constans with WIDTH and HEIGHT of the screen
-    WIDTH = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
-    HEIGHT = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 
     # frames per second
 
