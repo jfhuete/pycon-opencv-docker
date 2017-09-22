@@ -1,4 +1,5 @@
 import red_ball
+import tinto_verano
 import face
 
 if __name__ == "__main__":
@@ -15,6 +16,8 @@ if __name__ == "__main__":
 
     if selection == 1:
         app = red_ball
+    if selection == 2:
+        app = tinto_verano
     if selection == 3:
         app = face
 
