@@ -5,7 +5,7 @@ from time import sleep
 
 def clean_mask(mask):
 
-    # Opening to remove salt and pepper noise
+    # Dilation + closing to remove salt and pepper noise
 
     kernel = np.ones((20, 20), np.uint8)
     mask_dilation = cv2.dilate(mask, kernel, iterations=3)

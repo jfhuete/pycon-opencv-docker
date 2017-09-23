@@ -29,7 +29,10 @@ def detection(mask, frame, last_circle):
         c = max(cnts, key=cv2.contourArea)
         ((x, y), radius) = cv2.minEnclosingCircle(c)
         M = cv2.moments(c)
-        center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+        try:
+            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+        except ZeroDivisionError:
+            center = (0, 0)
 
         # only proceed if the radius meets a minimum size
         if radius > 10:
